@@ -1,0 +1,28 @@
+# Forward Process Parameters
+beta_min: 1.0e-4
+beta_max: 0.02
+max_t: 1000
+kernel:
+  name: 'matern32'
+  var: 1.
+  length_scale: 0.1
+gp_covar_eps: 1.0e-10
+
+# Training / Optimization Parameters
+epochs: 50
+#batch_size: 128
+optim_params:
+  lr: 0.001
+  weight_decay: 0  # FNO1d uses 1e-4
+loss: 'sobolev'  # ['spectral', 'discrete', 'sobolev']
+n_terms: 256  # Number of terms in series expansion of spectral loss
+graph_radius: 0.2  # Radius for construction of graph in GNO
+
+# Data parameters
+n_x: 64
+x_min: 0.
+x_max: 1.
+
+# Etc.
+device: 'cuda'  # ['cpu', 'cuda']
+dtype: 'double'  # ['float', 'double']

@@ -1,0 +1,17 @@
+name: functional_diffusion
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10.4
+  - numpy=1.21.5
+  - pytorch=1.11.0
+  - cudatoolkit=11.3
+  - torchaudio=0.11.0
+  - torchvision=0.12.0
+  - matplotlib=3.5.1
+  - scipy=1.8.0
+  - pip
+  - pip:
+    - tqdm==4.64
